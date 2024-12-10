@@ -74,7 +74,7 @@ func ToKusionResourceID(p Provider, resourceType, resourceName string) (string, 
 	return strings.Join([]string{tfProviderStr, resourceType, resourceName}, resources.SegmentSeparator), nil
 }
 
-// NewKusionResource creates a Kusion Resource object with the given resourceType, localID, obj and objectMeta.
+// NewKusionResource creates a Kusion Resource object with the given resourceType, resourceID, attributes.
 func NewKusionResource(p Provider, resourceType, resourceID string,
 	attrs map[string]interface{}, dependsOn []string,
 ) (*v1.Resource, error) {
